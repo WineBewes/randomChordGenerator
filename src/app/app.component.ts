@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RandomBanjoChordGenerator, Chord, UserSettings } from './randomChordGenerator/randomBanjoChordGenerator'
+import { RandomBanjoChordGenerator, Chord, UserSettings } from './randomChordGenerator/randomBanjoChordGenerator';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -23,7 +23,6 @@ export class AppComponent {
       this.userSettings = JSON.parse(cookieValue);
     }
   }
- 
 
   title = 'Random Banjo Chord Generator';
   get withCharacter(): boolean {
@@ -36,8 +35,19 @@ export class AppComponent {
   chords: Array<Chord>;
 
   getRandomChords() {
-    this.cookieService.set(this.userSettingsCookieKey, JSON.stringify(this.userSettings));
+
+    this.setCookieUserSettings();
+
     this.chords = this.randomBanjoChordGenerator.generate(this.userSettings);
+  }
+
+  private setCookieUserSettings() {
+    let path: string = null;
+    const domain = window.location.hostname;
+    if (domain.toLowerCase().indexOf('localhost') < 0) {
+      path = '/randomChordGenerator';
+    }
+    this.cookieService.set(this.userSettingsCookieKey, JSON.stringify(this.userSettings), 1000, path);
   }
 }
 
