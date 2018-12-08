@@ -6,3 +6,19 @@
 .chord {
 	padding-top: 10px;
 }
+
+.posAbbreviation {
+	max-width: 1%;
+}
+
+.posName {
+	max-width: 13%;
+}
+
+.posAka {
+	max-width: 23%;
+}
+
+.posRoot {
+	max-width: 20%;
+}
