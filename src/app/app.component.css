@@ -7,18 +7,26 @@
 	padding-top: 10px;
 }
 
+.lower {
+	position: fixed;
+	top:30em;
+}
 .posAbbreviation {
-	max-width: 1%;
+	width:2%;
 }
 
 .posName {
-	max-width: 13%;
+	width:10%;
 }
 
 .posAka {
-	max-width: 23%;
+	width:20%;
 }
 
 .posRoot {
-	max-width: 20%;
+	width:15%;
+}
+
+.posBase {
+	width:25%;
 }
