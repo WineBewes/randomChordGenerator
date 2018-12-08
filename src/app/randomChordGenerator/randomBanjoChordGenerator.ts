@@ -12,11 +12,11 @@ export class RandomBanjoChordGenerator  {
 
         for (let i = 0; i < numberOfChords; i++) {
 
-            let chord = this.getChord(numberOfChords, withAccidentals, withMinor, withDominant7, withDimished);
+            let chord = this.getChord(withAccidentals, withMinor, withDominant7, withDimished);
 
             // geen dubbele chords
             while (chords.some((c: Chord) => c.note === chord.note && c.position === chord.position && c.character === chord.character)) {
-                chord = this.getChord(numberOfChords, withAccidentals, withMinor, withDominant7, withDimished);
+                chord = this.getChord(withAccidentals, withMinor, withDominant7, withDimished);
             }
 
             chords.push(chord);
@@ -26,7 +26,7 @@ export class RandomBanjoChordGenerator  {
         return chords;
     }
 
-    private getChord(numberOfChords: number, withAccidentals: boolean, withMinor: boolean,
+    private getChord(withAccidentals: boolean, withMinor: boolean,
         withDominant7: boolean, withDimished: boolean): Chord {
 
         const note = this.getNoteWithEventualAccidental(withAccidentals);
