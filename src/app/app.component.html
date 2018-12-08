@@ -101,25 +101,27 @@
             <div class="posRoot">root on 3rd string</div>
             <div class="posBase">base (4th string)= fifth, e.g. D</div>
         </div>
-        <div class="row">
-            <div class="header" style="margin-top:2em;">Characters</div> 
-        </div>
-        <div class="row">
-            <div class="col-md-1 col-smd-1"></div>
-            <div class="col-md-2 col-lg-2">major</div>
-        </div>
-        <div class="row">
-            <div class="col-md-1 col-lg-1">m</div>
-            <div class="col-md-2 col-lg-2">minor</div>
-        </div>
-        <div class="row">
-            <div class="col-md-1 col-lg-1">7</div>
-            <div class="col-md-2 col-lg-2">dominant 7</div>
-        </div>
-        <div class="row">
-            <div class="col-md-1 col-lg-1">&#216;</div>
-            <div class="col-md-2 col-lg-2">(half) diminished</div>
-        </div>
+        <div [hidden]="!withCharacter">
+            <div class="row">
+                <div class="header" style="margin-top:2em;">Characters</div> 
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-smd-1"></div>
+                <div class="col-md-2 col-lg-2">major</div>
+            </div>
+            <div class="row" [hidden]="!userSettings.withMinor">
+                <div class="col-md-1 col-lg-1">m</div>
+                <div class="col-md-2 col-lg-2">minor</div>
+            </div>
+            <div class="row" [hidden]="!userSettings.withDominant7">
+                <div class="col-md-1 col-lg-1">7</div>
+                <div class="col-md-2 col-lg-2">dominant 7</div>
+            </div>
+            <div class="row" [hidden]="!userSettings.withDiminished">
+                <div class="col-md-1 col-lg-1">&#216;</div>
+                <div class="col-md-2 col-lg-2">(half) diminished</div>
+            </div>
+        </div>        
     </div>
     <div class="row"> 
     <div class="col-md-2 col-lg-1">
