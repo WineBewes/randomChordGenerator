@@ -5,18 +5,19 @@ export class RandomBanjoChordGenerator  {
     private accidentals = ['b', '#'];
     private positions = ['R', '1', '2'];
 
-    public generate(numberOfChords: number, withAccidentals: boolean, withMinor: boolean,
-                    withDominant7: boolean, withDimished: boolean): Array<Chord> {
+    public generate(userSettings: UserSettings): Array<Chord> {
 
         const chords = new Array<Chord>();
 
-        for (let i = 0; i < numberOfChords; i++) {
+        for (let i = 0; i < userSettings.numberOfChords; i++) {
 
-            let chord = this.getChord(withAccidentals, withMinor, withDominant7, withDimished);
+            let chord = this.getChord(userSettings.withAccidentals, userSettings.withMinor, 
+                    userSettings.withDominant7, userSettings.withDiminished);
 
             // geen dubbele chords
             while (chords.some((c: Chord) => c.note === chord.note && c.position === chord.position && c.character === chord.character)) {
-                chord = this.getChord(withAccidentals, withMinor, withDominant7, withDimished);
+                chord = this.getChord(userSettings.withAccidentals, userSettings.withMinor, 
+                    userSettings.withDominant7, userSettings.withDiminished);
             }
 
             chords.push(chord);
@@ -27,13 +28,13 @@ export class RandomBanjoChordGenerator  {
     }
 
     private getChord(withAccidentals: boolean, withMinor: boolean,
-        withDominant7: boolean, withDimished: boolean): Chord {
+        withDominant7: boolean, withDiminished: boolean): Chord {
 
         const note = this.getNoteWithEventualAccidental(withAccidentals);
 
         const position = this.getPosition();
 
-        const character = this.getEventualCharacter(withMinor, withDominant7, withDimished);
+        const character = this.getEventualCharacter(withMinor, withDominant7, withDiminished);
 
         return new Chord(note, position, character);
     }
@@ -123,3 +124,10 @@ export class Chord {
 }
 
 
+export class UserSettings {
+    withAccidentals = true;
+    withMinor = true;
+    withDominant7 = true;
+    withDiminished = true;
+    numberOfChords = 5;
+}

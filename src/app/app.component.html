@@ -32,7 +32,7 @@
                 accidentals (sharps or flats)
               </div>
               <div class="col-md-0 col-lg-0">
-                  <input type="checkbox" name="withAccidentals" [(ngModel)]="withAccidentals"/>
+                  <input type="checkbox" name="withAccidentals" [(ngModel)]="userSettings.withAccidentals"/>
               </div>              
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                   minor
                 </div>
                 <div class="col-md-0 col-lg-0">
-                    <input type="checkbox" name="withMinor" [(ngModel)]="withMinor"/>
+                    <input type="checkbox" name="withMinor" [(ngModel)]="userSettings.withMinor"/>
                 </div>              
               </div>
               <div class="row">
@@ -48,7 +48,7 @@
                     dominant 7
                   </div>
                   <div class="col-md-0 col-lg-0">
-                      <input type="checkbox" name="withDominant7" [(ngModel)]="withDominant7"/>
+                      <input type="checkbox" name="withDominant7" [(ngModel)]="userSettings.withDominant7"/>
                   </div>              
                 </div>
                 <div class="row">
@@ -56,7 +56,7 @@
                       (half) diminished
                     </div>
                     <div class="col-md-0 col-lg-0">
-                        <input type="checkbox" name="withDiminished" [(ngModel)]="withDiminished"/>
+                        <input type="checkbox" name="withDiminished" [(ngModel)]="userSettings.withDiminished"/>
                     </div>              
                   </div>
                   <div class="row" style="margin-top:2em;">
@@ -64,7 +64,7 @@
                         Number of chords
                       </div>
                       <div class="col-md-0 col-lg-0">
-                          <select name="numberOfChords" [(ngModel)]="numberOfChords">
+                          <select name="numberOfChords" [(ngModel)]="userSettings.numberOfChords">
                               <option *ngFor="let numberOfChords of numberOfChordsList">{{numberOfChords}}</option>
                             </select>
                       </div>
