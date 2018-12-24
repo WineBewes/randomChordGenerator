@@ -1,3 +1,4 @@
+import { UserSettings } from './../userSettings';
 
 export class RandomBanjoChordGenerator  {
 
@@ -124,10 +125,4 @@ export class Chord {
 }
 
 
-export class UserSettings {
-    withAccidentals = false;
-    withMinor = false;
-    withDominant7 = false;
-    withDiminished = false;
-    numberOfChords = 5;
-}
+
