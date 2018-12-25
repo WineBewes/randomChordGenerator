@@ -10,7 +10,9 @@ import { AppComponent } from './app.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  const domain = window.location.hostname;
+  const prefix = './assets/i18n/';
+  return new TranslateHttpLoader(http, prefix);
 }
 
 @NgModule({

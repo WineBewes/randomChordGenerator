@@ -18,6 +18,8 @@ export class AppComponent {
 
   constructor(private randomBanjoChordGenerator: RandomBanjoChordGenerator, private cookieService: CookieService,
     public translate: TranslateService) {
+     // this language will be used as a fallback when a translation isn't found in the current language
+     this.translate.setDefaultLang('en');
     this.chords = new Array<Chord>();
     this.userSettings = new UserSettings();
     const cookieValue = this.cookieService.get(this.userSettingsCookieKey);
@@ -25,9 +27,8 @@ export class AppComponent {
       this.userSettings = new UserSettings();
     }  else {
       this.userSettings = JSON.parse(cookieValue);
+      this.translate.use(this.userSettings.taal);
     }
-     // this language will be used as a fallback when a translation isn't found in the current language
-     this.translate.setDefaultLang('en');
   }
 
   get withCharacter(): boolean {
