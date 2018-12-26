@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  const domain = window.location.hostname;
   const prefix = './assets/i18n/';
   return new TranslateHttpLoader(http, prefix);
 }
