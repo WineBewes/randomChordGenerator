@@ -31,7 +31,7 @@
             "BASE" : "la note basse (4ième corde)= troisième, p.ex. B"
         },
         "SECOND_INVERSION" : {
-            "_": "Deuxième fondamentale",
+            "_": "Deuxième renversement",
             "AKA": "aussi connu comme 'barré'",
             "ROOT_STRING" : "fondamentale sur la troisième corde",
             "BASE" : "la note basse (4ième corde)= quinte, e.g. D"
