@@ -19,21 +19,21 @@
     "POSITIONS" : {
         "_" : "Positions",
         "ROOT" : {
-            "_" : "Racine",
+            "_" : "Fondamentale",
             "AKA": "aussi connue comme la position F",
-            "ROOT_STRING" : "racine sur la première corde",
+            "ROOT_STRING" : "fondamentale sur la première corde",
             "BASE" : "la note basse (4ième corde) = racine, p.ex. G"
         },
         "FIRST_INVERSION" : {
-            "_": "Première inversion",
-            "AKA": "aussi connue comme la position D",
-            "ROOT_STRING" : "racine sur la deuxième corde",
+            "_": "Premier renversement",
+            "AKA": "aussi connu comme la position D",
+            "ROOT_STRING" : "fondamentale sur la deuxième corde",
             "BASE" : "la note basse (4ième corde)= troisième, p.ex. B"
         },
         "SECOND_INVERSION" : {
-            "_": "Deuxième inversion",
-            "AKA": "aussi connue comme 'barré'",
-            "ROOT_STRING" : "racine sure la troisième corde",
+            "_": "Deuxième fondamentale",
+            "AKA": "aussi connu comme 'barré'",
+            "ROOT_STRING" : "fondamentale sur la troisième corde",
             "BASE" : "la note basse (4ième corde)= quinte, e.g. D"
         }
     },
