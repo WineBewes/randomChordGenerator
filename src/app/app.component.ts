@@ -14,7 +14,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class AppComponent {
 
-  private userSettingsCookieKey = 'UserSettings';
+  private userSettingsCookieKey = 'RCG_UserSettings';
 
   constructor(private randomBanjoChordGenerator: RandomBanjoChordGenerator, private cookieService: CookieService,
     public translate: TranslateService) {
@@ -58,12 +58,7 @@ export class AppComponent {
   }
 
   private setCookieUserSettings() {
-    let path: string = null;
-    const domain = window.location.hostname;
-    if (domain.toLowerCase().indexOf('localhost') < 0) {
-      path = '/randomChordGenerator';
-    }
-    this.cookieService.set(this.userSettingsCookieKey, JSON.stringify(this.userSettings), 1000, path);
+    this.cookieService.set(this.userSettingsCookieKey, JSON.stringify(this.userSettings), 1000);
   }
 }
 
