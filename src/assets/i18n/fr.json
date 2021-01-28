@@ -1,0 +1,47 @@
+{
+    "TITLE" : "Générateur au hasard des Accords de Banjo",
+    "CHORD_TABLE" : {
+        "CHORD" : "Accord",
+        "POSITION" : "Position",
+        "CHARACTER" : "Charactère"
+    },
+    "WITH" : {
+        "_" : "Avec",
+        "ACCIDENTALS" : "altérations (bémol ou dièse)",
+        "MINOR" : "mineur",
+        "DOMINANT7" : "dominante 7",
+        "DIMINISHED" : "(demi) diminué",
+        "NUMBEROFCHORDS" : "Nombre d'accords"        
+    },
+    "BUTTON" : {
+        "GENERATE_CHORDS" : "Générez des accords"
+    },
+    "POSITIONS" : {
+        "_" : "Positions",
+        "ROOT" : {
+            "_" : "Fondamentale",
+            "AKA": "aussi connue comme la position F",
+            "ROOT_STRING" : "fondamentale sur la première corde",
+            "BASE" : "la note basse (4ième corde) = racine, p.ex. G"
+        },
+        "FIRST_INVERSION" : {
+            "_": "Premier renversement",
+            "AKA": "aussi connu comme la position D",
+            "ROOT_STRING" : "fondamentale sur la deuxième corde",
+            "BASE" : "la note basse (4ième corde)= troisième, p.ex. B"
+        },
+        "SECOND_INVERSION" : {
+            "_": "Deuxième renversement",
+            "AKA": "aussi connu comme 'barré'",
+            "ROOT_STRING" : "fondamentale sur la troisième corde",
+            "BASE" : "la note basse (4ième corde)= quinte, e.g. D"
+        }
+    },
+    "CHARACTERS": {
+        "_": "Charactères",
+        "MAJOR": "majeur",
+        "MINOR": "mineur",
+        "DOMINANT7" : "dominante 7",
+        "DIMINISHED" : "(demi) diminué"
+    }
+}

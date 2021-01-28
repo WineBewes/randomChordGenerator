@@ -1,0 +1,47 @@
+    {
+        "TITLE" : "Random Banjo Chord Generator",
+        "CHORD_TABLE" : {
+            "CHORD" : "Chord",
+            "POSITION" : "Position",
+            "CHARACTER" : "Character"
+        },
+        "WITH" : {
+            "_" : "With",
+            "ACCIDENTALS" : "accidentals (sharps or flats)",
+            "MINOR" : "minor",
+            "DOMINANT7" : "dominant 7",
+            "DIMINISHED" : "(half) diminished",
+            "NUMBEROFCHORDS" : "Number of chords"        
+        },
+        "BUTTON" : {
+            "GENERATE_CHORDS" : "Generate chords"
+        },
+        "POSITIONS" : {
+            "_" : "Positions",
+            "ROOT" : {
+                "_" : "Root",
+                "AKA": "aka F-shape aka Y-shape",
+                "ROOT_STRING" : "root on 1st string",
+                "BASE" : "base (4th string)= root, e.g. G"
+            },
+            "FIRST_INVERSION" : {
+                "_": "1st inversion",
+                "AKA": "aka D-shape aka X-shape",
+                "ROOT_STRING" : "root on 2nd string",
+                "BASE" : "base (4th string)= third, e.g. B"
+            },
+            "SECOND_INVERSION" : {
+                "_": "2nd inversion",
+                "AKA": "aka bar-shape",
+                "ROOT_STRING" : "root on 3rd string",
+                "BASE" : "base (4th string)= fifth, e.g. D"
+            }
+        },
+        "CHARACTERS": {
+            "_": "Characters",
+            "MAJOR": "major",
+            "MINOR": "minor",
+            "DOMINANT7" : "dominant 7",
+            "DIMINISHED" : "(half) diminished"
+        }
+    }

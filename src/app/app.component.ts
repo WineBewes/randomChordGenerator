@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { RandomBanjoChordGenerator, Chord, UserSettings } from './randomChordGenerator/randomBanjoChordGenerator';
+import { RandomBanjoChordGenerator, Chord } from './randomChordGenerator/randomBanjoChordGenerator';
+import { UserSettings } from './usersettings';
 import { CookieService } from 'ngx-cookie-service';
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -13,7 +16,10 @@ export class AppComponent {
 
   private userSettingsCookieKey = 'UserSettings';
 
-  constructor(private randomBanjoChordGenerator: RandomBanjoChordGenerator, private cookieService: CookieService) {
+  constructor(private randomBanjoChordGenerator: RandomBanjoChordGenerator, private cookieService: CookieService,
+    public translate: TranslateService) {
+     // this language will be used as a fallback when a translation isn't found in the current language
+     this.translate.setDefaultLang('en');
     this.chords = new Array<Chord>();
     this.userSettings = new UserSettings();
     const cookieValue = this.cookieService.get(this.userSettingsCookieKey);
@@ -21,16 +27,26 @@ export class AppComponent {
       this.userSettings = new UserSettings();
     }  else {
       this.userSettings = JSON.parse(cookieValue);
+      this.translate.use(this.userSettings.taal);
     }
   }
 
-  title = 'Random Banjo Chord Generator';
   get withCharacter(): boolean {
     return this.userSettings.withMinor || this.userSettings.withDominant7 || this.userSettings.withDiminished;
   }
 
   userSettings: UserSettings;
   numberOfChordsList = [3, 5, 10];
+  talen = ['en', 'fr', 'nl'];
+  get taal(): string {
+    return this.userSettings.taal;
+  } 
+
+  set taal(value: string) {
+    this.userSettings.taal = value;
+    this.translate.use(value);
+    this.setCookieUserSettings();
+  }
 
   chords: Array<Chord>;
 

@@ -1,0 +1,47 @@
+{
+    "TITLE" : "Willekeurige Banjo Akkoorden Generator",
+    "CHORD_TABLE" : {
+        "CHORD" : "Akkoord",
+        "POSITION" : "Positie",
+        "CHARACTER" : "Karakter"
+    },
+    "WITH" : {
+        "_" : "Met",
+        "ACCIDENTALS" : "voortekens (kruisen of bemols)",
+        "MINOR" : "mineur",
+        "DOMINANT7" : "dominant 7",
+        "DIMINISHED" : "(half) diminué",
+        "NUMBEROFCHORDS" : "Aantal akkoorden"        
+    },
+    "BUTTON" : {
+        "GENERATE_CHORDS" : "Genereer akkoorden"
+    },
+    "POSITIONS" : {
+        "_" : "Posities",
+        "ROOT" : {
+            "_" : "Root",
+            "AKA": "alias F-shape alias Y-shape",
+            "ROOT_STRING" : "root op 1ste snaar",
+            "BASE" : "bas (4de snaar)= root, bvb. G"
+        },
+        "FIRST_INVERSION" : {
+            "_": "1ste inversie",
+            "AKA": "alias D-shape alias X-shape",
+            "ROOT_STRING" : "root op 2e snaar",
+            "BASE" : "bas (4de snaar)= terts, bvb. B"
+        },
+        "SECOND_INVERSION" : {
+            "_": "2e inversie",
+            "AKA": "alias barré",
+            "ROOT_STRING" : "root op 3e snaar",
+            "BASE" : "bas (4e snaar)= kwint, bvb. D"
+        }
+    },
+    "CHARACTERS": {
+        "_": "Karakters",
+        "MAJOR": "majeur",
+        "MINOR": "mineur",
+        "DOMINANT7" : "dominant 7",
+        "DIMINISHED" : "(half) diminué"
+    }
+}

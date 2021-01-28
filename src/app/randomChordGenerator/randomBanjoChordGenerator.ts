@@ -1,4 +1,7 @@
+import { Injectable } from "@angular/core";
+import { UserSettings } from './../userSettings';
 
+@Injectable()
 export class RandomBanjoChordGenerator  {
 
     private notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -124,10 +127,4 @@ export class Chord {
 }
 
 
-export class UserSettings {
-    withAccidentals = false;
-    withMinor = false;
-    withDominant7 = false;
-    withDiminished = false;
-    numberOfChords = 5;
-}
+
